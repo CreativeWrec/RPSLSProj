@@ -14,7 +14,7 @@ namespace RPSLS_Proj
         }
 
         //Welcome/Setup
-        //1. Display rules to user
+        //1. Display rules to user / DisplayRules()
         //2. Prompt user to choose 1 to 2 players
         //3. Asker players to enter their names (optional)
 

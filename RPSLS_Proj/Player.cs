@@ -13,15 +13,16 @@ namespace RPSLS_Proj
         public int score;
         public string chosenGesture;
 
+
         //Construtor
         public Player()
         {
+            score = 0;
+            name = "";
 
         }
         //Method (can do)
-        public abstract ChooseGesture()
-        {
-
-        }
+        public abstract void ChooseGesture();
+        
     }
 }

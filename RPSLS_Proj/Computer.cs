@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace RPSLS_Proj
 {
-    class Computer
+    class Computer : Player
     {
+        //Variable (has a)
+        Computer computer;
+        //Construtor
+        public Computer()
+        {
+
+        }
+        //Method (can do)
+        public override void ChooseGesture()
+        {
+            //Use random number to choose gesture
+            
+        }
     }
 }
