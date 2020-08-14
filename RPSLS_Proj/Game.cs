@@ -90,7 +90,21 @@ namespace RPSLS_Proj
             //p2 gets a point
             //tied game
         }
-       
+        public void DisplayWinner()
+        {
+            if (playerOne.score == pointsNeededToWin)
+            {
+                Console.WriteLine("Player1 Wins! Game Over");
+                Console.WriteLine("Wanna Play Again?");
+                ChooseGameMode();
+            }
+            else if (playerTwo.score == pointsNeededToWin)
+            {
+                Console.WriteLine("Player2 Wins! Game Over");
+                Console.WriteLine("Wanna Play Again?");
+                ChooseGameMode();
+            }
+        }
 
 
 

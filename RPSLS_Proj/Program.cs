@@ -10,7 +10,9 @@ namespace RPSLS_Proj
     {
         static void Main(string[] args)
         {
-            Game game = new Game
+            Game game = new Game();
+            game.RunGame();
+            Console.ReadLine();
         }
 
         //Welcome/Setup
@@ -32,8 +34,7 @@ namespace RPSLS_Proj
         //Endgame
         //12. Display the winner of the game
         //13. Ask if player wants to play another game (optional)
-        DisplayRules();
-        ChoosePlayerTwoType();
+        
 
 
     }

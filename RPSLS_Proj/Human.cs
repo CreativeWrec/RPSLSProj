@@ -14,13 +14,15 @@ namespace RPSLS_Proj
         //Construtor
         public Human()
         {
-
+            
         }
         //Method (can do)
         public override void ChooseGesture()
         {
             //displaying choices
             //getting user input
+            gestures 
+            userInput = Console.ReadLine
             
         }
     }

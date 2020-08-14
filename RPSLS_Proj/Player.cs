@@ -12,6 +12,7 @@ namespace RPSLS_Proj
         public string name;
         public int score;
         public string chosenGesture;
+        public List<string> gestures = new List<string>();
 
 
         //Construtor
@@ -20,6 +21,11 @@ namespace RPSLS_Proj
             score = 0;
             name = "";
 
+            guestures.Add("Rock");
+            guestures.Add("Paper");
+            guestures.Add("Scissors");
+            guestures.Add("Lizard");
+            guestures.Add("Spock");
         }
         //Method (can do)
         public abstract void ChooseGesture();
