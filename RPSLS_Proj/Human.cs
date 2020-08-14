@@ -21,7 +21,7 @@ namespace RPSLS_Proj
         {
             //displaying choices
             //getting user input
-            //Use random number to choose gesture
+            
         }
     }
 }

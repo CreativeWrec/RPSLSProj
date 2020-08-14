@@ -19,7 +19,9 @@ namespace RPSLS_Proj
         public override void ChooseGesture()
         {
             //Use random number to choose gesture
-            
+            Random rng = new Random();
+            int randomIndex = rng.Next(0, 5);
+            chosenGesture = gestures[randomIndex];
         }
     }
 }
