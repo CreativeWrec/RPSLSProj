@@ -16,13 +16,13 @@ namespace RPSLS_Proj
         }
 
         //Welcome/Setup
-        //1. Display rules to user / DisplayRules()
-        //2. Prompt user to choose 1 to 2 players
-        //3. Asker players to enter their names (optional)
+        //1. Display rules to user / DisplayRules() ++
+        //2. Prompt user to choose 1 to 2 players ++
+        //3. Asker players to enter their names (optional) ++
 
         //A round of play
-        //4. Display gesture options
-        //5. Have playher one choose a gesture
+        //4. Display gesture options ++
+        //5. Have playher one choose a gesture ++
         //6. Display gesture options(what if p2 is a computer?)
         //7. Have player two choose a gesture
         //8. Compare the gestures of the players

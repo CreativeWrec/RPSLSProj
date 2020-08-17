@@ -33,9 +33,12 @@ namespace RPSLS_Proj
             DisplayRules();
             ChooseGameMode();
             ViewGestureOptions();
+
+            //have players pick gestures
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
             CompareGestures();
             DisplayWinner();
-
         }
 
         public void Welcome()
@@ -58,19 +61,28 @@ namespace RPSLS_Proj
         }
         public void ChooseGameMode()
         {
-            //If/Else
-            //Display a message to user asking them to choose 1 player or 2
-            //Grab user input
-            //instantiate playerTwo as a human or Computer
-            Console.WriteLine("Do you want a 1 or 2 Player game? Type 1 or 2");
-            string input = Console.ReadLine();
-            if (input == "1")
+            Console.WriteLine("Please enter 1 for HvC, or enter 2 for HvH");
+
+            string userInput = Console.ReadLine();
+            //what if they don't type in 1 or 2
+
+            if (userInput == "1")
             {
+                //HvC game
+                playerOne = new Human();
                 playerTwo = new Computer();
             }
-            else if (input == "2")
+            else if (userInput == "2")
             {
+                //HvH
+                playerOne = new Human();
                 playerTwo = new Human();
+            }
+            else
+            {
+                //TODO: Try Again?
+                Console.WriteLine("Better Luck Next Time, Let's Try That Again!");
+                ChooseGameMode();
             }
         }
         public void ViewGestureOptions()
@@ -87,8 +99,63 @@ namespace RPSLS_Proj
         public void CompareGestures()
         {
             //p1 gets a point
-            //p2 gets a point
-            //tied game
+            if (playerOne.chosenGesture == playerTwo.chosenGesture)
+            {
+                Console.WriteLine("Tie Game");
+            }
+            else if (playerOne.chosenGesture == "Rock" && (playerTwo.chosenGesture == "Paper" || playerTwo.chosenGesture == "Spock"))
+            {
+                //player2 won the round
+                Console.WriteLine("Player2 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Rock" && (playerTwo.chosenGesture == "Scissors" || playerTwo.chosenGesture == "Lizard"))
+            {
+                Console.WriteLine("Player1 has won the round");
+                playerOne.score++;
+            }
+            else if (playerOne.chosenGesture == "Paper" && (playerTwo.chosenGesture == "Scissors" || playerTwo.chosenGesture == "Lizard"))
+            {
+                Console.WriteLine("Player2 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Paper" && (playerTwo.chosenGesture == "Spock" || playerTwo.chosenGesture == "Rock"))
+            {
+                Console.WriteLine("Player1 has won the round");
+                playerOne.score++;
+            }
+            else if (playerOne.chosenGesture == "Scissors" && (playerTwo.chosenGesture == "Rock" || playerTwo.chosenGesture == "Spock"))
+            {
+                Console.WriteLine("Player2 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Scissors" && (playerTwo.chosenGesture == "Paper" || playerTwo.chosenGesture == "Lizard"))
+            {
+                Console.WriteLine("Player1 has won the round");
+                playerOne.score++;
+            }
+            else if (playerOne.chosenGesture == "Lizard" && (playerTwo.chosenGesture == "Scissors" || playerTwo.chosenGesture == "Rock"))
+            {
+                Console.WriteLine("Player2 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Lizard" && (playerTwo.chosenGesture == "Paper" || playerTwo.chosenGesture == "Spock"))
+            {
+                Console.WriteLine("Player1 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Spock" && (playerTwo.chosenGesture == "Lizard" || playerTwo.chosenGesture == "Paper"))
+            {
+                Console.WriteLine("Player2 has won the round");
+                playerTwo.score++;
+            }
+            else if (playerOne.chosenGesture == "Spock" && (playerTwo.chosenGesture == "Rock" || playerTwo.chosenGesture == "Scissors"))
+            {
+                Console.WriteLine("Player1 has won the round");
+                playerOne.score++;
+            }
+
+
         }
         public void DisplayWinner()
         {
@@ -105,6 +172,7 @@ namespace RPSLS_Proj
                 ChooseGameMode();
             }
         }
+
 
 
 

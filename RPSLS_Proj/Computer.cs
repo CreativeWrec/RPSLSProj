@@ -10,11 +10,11 @@ namespace RPSLS_Proj
     class Computer : Player
     {
         //Variable (has a)
-        Computer computer;
+        
         //Construtor
         public Computer()
         {
-
+            
         }
         //Method (can do)
         public override void ChooseGesture()

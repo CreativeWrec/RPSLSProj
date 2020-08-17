@@ -9,7 +9,7 @@ namespace RPSLS_Proj
     class Human : Player
     {
         //Variable (has a)
-        Human human;
+        
 
         //Construtor
         public Human()
@@ -21,9 +21,12 @@ namespace RPSLS_Proj
         {
             //displaying choices
             //getting user input
-            gestures 
-            userInput = Console.ReadLine
             
+            Console.WriteLine("What gesture would you like to choose? 0.Rock, 1. Paper, 2. Scissor, 3. Lizard, 4. Spock");
+            string userInput = Console.ReadLine();
+            int indexNumber = int.Parse(userInput);
+            chosenGesture = gestures[indexNumber];
+
         }
     }
 }

@@ -21,11 +21,11 @@ namespace RPSLS_Proj
             score = 0;
             name = "";
 
-            guestures.Add("Rock");
-            guestures.Add("Paper");
-            guestures.Add("Scissors");
-            guestures.Add("Lizard");
-            guestures.Add("Spock");
+            gestures.Add("Rock");
+            gestures.Add("Paper");
+            gestures.Add("Scissors");
+            gestures.Add("Lizard");
+            gestures.Add("Spock");
         }
         //Method (can do)
         public abstract void ChooseGesture();
