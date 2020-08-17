@@ -13,6 +13,8 @@ namespace RPSLS_Proj
         public Player playerOne;
         public Player playerTwo;
         public int pointsNeededToWin;
+        
+
 
         //Construtor
         public Game()
@@ -32,13 +34,17 @@ namespace RPSLS_Proj
             Welcome();
             DisplayRules();
             ChooseGameMode();
-            ViewGestureOptions();
 
-            //have players pick gestures
-            playerOne.ChooseGesture();
-            playerTwo.ChooseGesture();
-            CompareGestures();
-            DisplayWinner();
+            while(playerOne.score != 3 && playerTwo.score != 3)
+            {
+                ViewGestureOptions();
+                //have players pick gestures
+                playerOne.ChooseGesture();
+                playerTwo.ChooseGesture();
+                CompareGestures();
+                DisplayWinner();
+            }
+            
         }
 
         public void Welcome()
@@ -162,14 +168,25 @@ namespace RPSLS_Proj
             if (playerOne.score == pointsNeededToWin)
             {
                 Console.WriteLine("Player1 Wins! Game Over");
-                Console.WriteLine("Wanna Play Again?");
-                ChooseGameMode();
+                Console.WriteLine("Wanna Play Again? Y/N?");
+                string userInput = Console.ReadLine();
+
+                if (userInput == "Y")
+                {
+                    ChooseGameMode();
+                }
+
             }
             else if (playerTwo.score == pointsNeededToWin)
             {
                 Console.WriteLine("Player2 Wins! Game Over");
-                Console.WriteLine("Wanna Play Again?");
-                ChooseGameMode();
+                Console.WriteLine("Wanna Play Again? Y/N?");
+                string userInput = Console.ReadLine();
+
+                if (userInput == "Y")
+                {
+                    ChooseGameMode();
+                }
             }
         }
 
